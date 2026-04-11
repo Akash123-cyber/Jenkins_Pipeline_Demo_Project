@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}About{% endblock title %}
 {% block css %}
-<link rel="stylesheet" href="../static/css/about.css">
+<link rel="stylesheet" href="{% static "css/about.css" %}">
 {% endblock css %}
 {% block body %}
    
@@ -26,7 +26,7 @@ At Soni Jewellers, we believe jewellery is more than an ornament — it is a sym
 <div class="story-container">
 
 <div class="story-image">
-<img src="../static/img/story.png" alt="Soni Jewellers">
+<img src="{% static "img/story.png" %}" alt="Soni Jewellers">
 </div>
 
 <div class="story-text">

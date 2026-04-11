@@ -1,6 +1,6 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- adding external css -->
-    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
     {% block css %}{% endblock css %}
 </head>
 
