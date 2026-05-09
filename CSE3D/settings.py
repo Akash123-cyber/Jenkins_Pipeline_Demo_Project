@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#uhiu8wmq19@()b+ev67&a+u4o8%5+-lg3%bbo2^=!m9b-5c!p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['52.66.51.92']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -116,7 +117,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT ='/Jenkins_Pipeline_Demo_Project/static'
+STATIC_ROOT ='/Jenkins_Pipeline_Demo_Project/static-files'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = '/Jenkins_Pipeline_Demo_Project/media'
@@ -127,7 +128,7 @@ MEDIA_ROOT = '/Jenkins_Pipeline_Demo_Project/media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
     
-# ]
+]
